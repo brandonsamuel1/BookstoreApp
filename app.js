@@ -8,6 +8,7 @@ const Bookstore = require("./models/index");
 const indexRoutes = require('./routes/index');
 const bookstoreRoutes = require('./routes/bookstore');
 
+mongoose.connect("mongodb://localhost/bookstore");
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
