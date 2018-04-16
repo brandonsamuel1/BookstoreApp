@@ -7,7 +7,7 @@ router.get("/", function(req, res){
     if(err) {
       console.log(err);
     } else {
-      res.render("bookstore", {book: book});
+      res.render("bookstore", {books: book});
     }
   })
 });
@@ -28,6 +28,11 @@ router.post("/", function(req, res){
       res.redirect("/bookstore");
     }
   })
+});
+
+
+router.get("/new", function(req, res){
+  res.render("new");
 });
 
 module.exports = router;
